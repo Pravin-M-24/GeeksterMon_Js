@@ -253,7 +253,7 @@ async function fetchPokemon(){
     }
     fetchPokemon();
 
-// created card for fetched pokemon array from api
+// created cards for fetched data of pokemon array from api
 
 function createCard(filteredPok){
        for(let i = 0 ; i < filteredPok.length ; i++){
