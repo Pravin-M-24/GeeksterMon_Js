@@ -12,6 +12,8 @@ const poktypeArr = ["normal" , "fighting", "flying" , "poison","ground" , "rock"
 
 // console.log(select.value);
 
+// Search pokemon by Type through select tag
+
 async function searchByTypes(){
       
     const fetchData = await fetch("https://pokeapi.co/api/v2/type");
@@ -32,6 +34,9 @@ async function searchByTypes(){
 });
 }
 // console.log(pokemontypes_obj);
+
+// Explored how to fetch pok abilities through function
+
 async function getPokeAblities(URL){
     
     let data = await fetch(URL);
@@ -44,6 +49,8 @@ async function getPokeAblities(URL){
 }
     return str;
 }
+
+//  filter pokemon by type
 
  async function filterByType (e){
     e.preventDefault();
@@ -132,6 +139,8 @@ async function getPokeAblities(URL){
        }
 }
 
+// Diff types of pokemon on page load
+
  async function loadedCards(){
     let count = 0;
      for(let j = 1 ; j <= 17 ; j ++){
@@ -219,6 +228,8 @@ async function getPokeAblities(URL){
     
 }
 
+//  Created pokemon Array by fetching datas from api
+
 async function fetchPokemon(){
         let promises = [];
 
@@ -241,6 +252,8 @@ async function fetchPokemon(){
      })
     }
     fetchPokemon();
+
+// created card for fetched pokemon array from api
 
 function createCard(filteredPok){
        for(let i = 0 ; i < filteredPok.length ; i++){
@@ -300,6 +313,8 @@ function createCard(filteredPok){
         flip_container.append(flip_card);
 }
 }
+
+
 document.addEventListener('DOMContentLoaded' ,()=>{
                searchByTypes();
 })
